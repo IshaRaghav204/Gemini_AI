@@ -1,0 +1,231 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 30px; /* Increased padding */
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 500px; /* Increased width */
+  max-width: 90%; /* Responsive for smaller screens */
+  animation: slideIn 0.3s forwards;
+}
+
+/* Slide-in animation for the modal */
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px; /* Larger close button */
+  color: #888;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #d9534f;
+}
+
+/* Form Container */
+.form-container {
+  padding: 40px; /* Increased padding */
+}
+
+/* Form Toggle */
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; /* Increased margin */
+}
+
+.form-toggle button {
+  width: 50%;
+  padding: 15px; /* Increased padding */
+  font-size: 18px; /* Larger font size */
+  background-color: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-toggle .active {
+  background-color: #033452;
+  color: white;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px; /* Larger heading font size */
+}
+
+.form input {
+  padding: 15px; /* Increased padding */
+  margin-bottom: 10px; /* Reduced margin to decrease space */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px; /* Larger input font size */
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  border-color: #033452;
+  outline: none;
+}
+
+/* Enhanced Button Styles */
+.form button {
+  padding: 15px; /* Increased padding */
+  background-color: #033452;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Larger button font size */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form button:hover {
+  background-color: #025f78;
+  transform: scale(1.05);
+}
+
+/* Links */
+.form a {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 5px; /* Adjusted margin */
+  text-align: right;
+  font-size: 16px; /* Larger link font size */
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px; 
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .close {
+    font-size: 24px; /* Adjusted for smaller screens */
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 0; /* No space above the error message */
+  margin-bottom: 10px; /* Small space below the error message */
+  line-height: 1; /* Prevents extra height */ /* Makes the text bolder for visibility */
+}
+
+/* Phone Number Input and Country Code */
+.phone-input-wrapper {
+  position: relative;
+  width: 100%; /* Ensure it takes the full width of the parent */
+  margin-bottom: 5px; /* Space between input fields */
+}
+
+
+/* .sms-button {
+  padding: 12px; 
+  margin-top: 10px; 
+  margin-bottom: 15px; 
+  width: 100%; 
+  background-color: transparent; 
+  color: grey; 
+  border: 1px solid grey;
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.sms-button:hover {
+  background-color: rgba(128, 128, 128, 0.2); 
+} */
+
+.verify-button {
+  padding: 12px;
+  margin-top: 10px;
+  width: 100%; /* Full width */
+  background-color: #033452; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Larger button font size */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.verify-button:hover {
+  background-color: #025f78; /* Darker color on hover */
+}
+
+.error-message-box {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  /* animation: fadeInOut 3s ease-in-out; */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
